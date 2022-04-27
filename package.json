@@ -1,0 +1,35 @@
+{
+  "name": "clapbackclient",
+  "description": "Browser/node client to clapbackdb",
+  "version": "0.0.1",
+  "main": "dist/cjs/index.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "test": "node test.js",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts",
+    "build": "rm -fr dist/* && tsc --declaration && tsc -p tsconfig-cjs.json --declaration && node make-modules-packages.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmamorim-repotest/clapbackclient.git"
+  },
+  "author": "Marcelo Amorim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmamorim-repotest/clapbackclient/issues"
+  },
+  "homepage": "https://github.com/mmamorim-repotest/clapbackclient#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.29",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.3"
+  }
+}
