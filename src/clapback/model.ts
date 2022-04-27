@@ -1,6 +1,6 @@
-import Schema from './schema.js';
+import Schema from './schema';
 import axios from "axios"
-import Clapback from './clapback.js';
+import Clapback from './clapback';
 
 export default class Model {
     private entityName: string

@@ -1,7 +1,12 @@
 
-import { _module } from "../dist/mjs/index.js"
-//const { _module } = require("./dist/cjs/index")
+import { Clapback } from "../dist/index.js"
 
+let cb = new Clapback("http://localhost:3030")
 
-console.log(_module)
-_module.fazAlgo()
+cb.ready.then((entities) =>{
+    console.log("running",entities);
+
+    cb.entity("Pessoa").model().getAll().then((data) => {
+        console.log(data);
+    })
+})

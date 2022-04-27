@@ -1,6 +1,6 @@
 
 import axios from "axios"
-import Entity from "./entity.js"
+import Entity from "./entity"
 
 export default class Clapback {
     public static host: string
@@ -13,6 +13,8 @@ export default class Clapback {
         this.ready = new Promise((_resolve, _reject) => {
             self.getEntities().then((data) => {
                 _resolve(data)
+            }).catch((e) => {
+                console.log("error getEntities ",e.code);            
             })
         })
     }

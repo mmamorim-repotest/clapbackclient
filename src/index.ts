@@ -1,10 +1,3 @@
-import Clapback from "./clapback/clapback.js"
+import Clapback from "./clapback/clapback"
 
 export { Clapback } 
-
-export const _module = {
-
-    fazAlgo: function() {
-        console.log("faz algo");        
-    }
-}

@@ -1,8 +1,8 @@
-import Schema from "./schema.js"
-import Model from "./model.js"
+import Schema from "./schema"
+import Model from "./model"
 import { io } from "socket.io-client"
 import axios from "axios"
-import Clapback from "./clapback.js"
+import Clapback from "./clapback"
 
   export default class Entity {
     private entityName: string
@@ -35,7 +35,7 @@ import Clapback from "./clapback.js"
         return this.schema.validate(data)
     }
 
-    model() {
+    model(): Model {
         return this._model
     }
 
